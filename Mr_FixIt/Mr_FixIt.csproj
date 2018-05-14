@@ -301,7 +301,7 @@
     <Content Include="Views\Manager\EditBulletin.cshtml" />
     <Content Include="Views\Manager\EditBuilding.cshtml" />
     <Content Include="Views\Manager\Index.cshtml" />
-    <Content Include="Views\Manager\DeletBulletin.cshtml" />
+    <Content Include="Views\Manager\DeleteBulletin.cshtml" />
     <Content Include="Views\Shared\_Employee.cshtml" />
     <Content Include="Views\Shared\_Manager.cshtml" />
     <Content Include="Views\Shared\_Tenant.cshtml" />

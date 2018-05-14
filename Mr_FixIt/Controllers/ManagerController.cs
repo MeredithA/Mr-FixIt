@@ -158,8 +158,6 @@ namespace Mr_FixIt.Controllers
             return RedirectToAction("Index");
         }
 
-
-
         public ActionResult CreateBulletin()
         {
             List<Building> Buildings = (from row in context.Buildings select row).ToList();

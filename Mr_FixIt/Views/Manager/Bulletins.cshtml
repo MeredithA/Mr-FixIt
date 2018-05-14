@@ -33,9 +33,9 @@
                 <td>
                     @item.DatePosted
                 </td>
-                <td>
+                @*<td>
                     @item.Owner.Email
-                </td>
+                </td>*@
                 <td>
                     @Html.ActionLink("Edit", "EditBulletin", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })
                 </td>
