@@ -165,5 +165,30 @@ namespace Mr_FixIt.Controllers
             ViewBag.UserId = new SelectList(context.Users, "Id", "Email", bulletinBoard.ID);
             return View(bulletinBoard);
         }
+
+        public ActionResult DeleteBulletin(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            BulletinBoard bulletinBoard = context.BulletinBoards.Find(id);
+            if (bulletinBoard == null)
+            {
+                return HttpNotFound();
+            }
+            return View(bulletinBoard);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteBulletin(int id)
+        {
+
+            BulletinBoard bulletin = (from row in context.BulletinBoards where row.ID == row.ID select row).First();
+            context.BulletinBoards.Remove(bulletin);
+            context.SaveChanges();
+            return RedirectToAction("Bulletins");
+        }
     }
 }

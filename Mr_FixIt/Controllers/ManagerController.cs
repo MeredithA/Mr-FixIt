@@ -205,7 +205,7 @@ namespace Mr_FixIt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditBulletin([Bind(Include = "ID,DatePosted,Email,Building,Building,IdOwner,Subject,Message,DateEdited,VisableToTenants")] BulletinBoard bulletinBoard)
+        public ActionResult EditBulletin([Bind(Include = "Building,BuildingId,DateEdited,DatePosted,ID,Message,NotListBuildingName,Owner,OwnerId,Subject,VisableToTenants")] BulletinBoard bulletinBoard)
         {
             if (ModelState.IsValid)
             {
