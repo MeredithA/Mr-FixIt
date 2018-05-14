@@ -305,7 +305,7 @@
     <Content Include="Views\Shared\_Employee.cshtml" />
     <Content Include="Views\Shared\_Manager.cshtml" />
     <Content Include="Views\Shared\_Tenant.cshtml" />
-    <Content Include="Views\Tenant\Bulletin.cshtml" />
+    <Content Include="Views\Tenant\Bulletins.cshtml" />
     <Content Include="Views\Tenant\Create.cshtml" />
     <Content Include="Views\Tenant\CreateBulletin.cshtml" />
     <Content Include="Views\Tenant\CreateTicket.cshtml" />

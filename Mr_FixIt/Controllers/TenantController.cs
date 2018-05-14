@@ -125,7 +125,7 @@ namespace Mr_FixIt.Controllers
             model.DateEdited = DatePosted;
             context.BulletinBoards.Add(model);
             context.SaveChanges();
-            return RedirectToAction("Bullitens");
+            return RedirectToAction("Bulletins");
         }
 
         public ActionResult Bulletins()
@@ -160,7 +160,7 @@ namespace Mr_FixIt.Controllers
             {
                 context.Entry(bulletinBoard).State = EntityState.Modified;
                 context.SaveChanges();
-                return RedirectToAction("EditBulliten");
+                return RedirectToAction("EditBulletin");
             }
             ViewBag.UserId = new SelectList(context.Users, "Id", "Email", bulletinBoard.ID);
             return View(bulletinBoard);
