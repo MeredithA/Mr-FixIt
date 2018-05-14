@@ -1,0 +1,76 @@
+﻿@model Mr_FixIt.Models.BulletinListViewModel
+@{
+    ViewBag.Title = "Bulletins";
+}
+
+<h2>Bulletin Board</h2>
+
+@if (Model.AllBulletins.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AllBulletins[0].Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllBulletins[0].DatePosted)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.AllBulletins[0].Owner.Email)
+                </th>*@
+        </tr>
+
+        @foreach (var item in Model.AllBulletins)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Subject, "ViewBulletin", new { id = item.ID })
+                </td>
+                <td>
+                    @item.DatePosted
+                </td>
+                @*<td>
+                        @item.Owner.Email
+                    </td>*@
+            </tr>
+        }
+    </table>
+}
+
+else
+{
+    <h4>No Bulletins</h4>
+}
+
+@if (Model.OwnedBulletins.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnedBulletins[0].Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnedBulletins[0].DatePosted)
+            </th>
+        </tr>
+        @foreach (var item in Model.AllBulletins)
+                {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Subject, "ViewBulletin", new { id = item.ID })
+                </td>
+                <td>
+                    @item.DatePosted
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditBulletin", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h4>You Have No Posted Any Bulletins</h4>
+}
+@Html.ActionLink("Create A Bulletin", "CreateBulletin")

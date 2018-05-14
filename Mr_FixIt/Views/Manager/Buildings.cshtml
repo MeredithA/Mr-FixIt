@@ -1,0 +1,61 @@
+﻿@model List<Mr_FixIt.Models.Building>
+@{
+    ViewBag.Title = "Buildings";
+}
+
+<h2>Your Buildings</h2>
+@if (Model.Count == 0)
+{
+    <h4>You currently have no registered buildings.</h4>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].StreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].ZipCode)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StreetAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZipCode)
+                </td>
+                <td>
+                    @Html.ActionLink("Tickets", "BuildingTickets", new { id = item.ID })
+                    @Html.ActionLink("Edit", "EditBuilding", new { id = item.ID })
+                    @Html.ActionLink("Delete", "DeleteBuilding", new { id = item.ID })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+@Html.ActionLink("Add A New Building", "AddBuilding")

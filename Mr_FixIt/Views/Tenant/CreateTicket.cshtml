@@ -1,0 +1,81 @@
+﻿@model Mr_FixIt.Models.Ticket
+@{
+    ViewBag.Title = "CreateTicket";
+}
+
+<h2>Submit A Work Request</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.NatureOfTicket, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                <h4>Nature Of The Work Request</h4>
+                <select class="form-control" id="NatureOfTicket" name="NatureOfTicket">
+                    <option>Select A Category</option>
+                    <option>Pest Control</option>
+                    <option>Electrical</option>
+                    <option>Plumbing</option>
+                    <option>Furnace</option>
+                    <option>Window</option>
+                    <option>Door</option>
+                </select>
+                @*@Html.EditorFor(model => model.NatureOfTicket, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.NatureOfTicket, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<select class="form-control" id="StudentGender" name="StudentGender">
+                <h4>Nature Of The Work Request</h4>
+                <option>Pest Control</option>
+                <option>Electrical</option>
+                <option>Plumbing</option>
+                <option>Furnace</option>
+                <option>Window</option>
+                <option>Door</option>
+            </select>*@
+
+        <div>
+            <p> @Html.CheckBox("check") <h5>Check if you would like to receive text notifications for this request</h5> </p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LocationOfTheReuqest, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LocationOfTheReuqest, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LocationOfTheReuqest, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AdditionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AdditionalInformation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AdditionalInformation, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @using (Html.BeginForm("UploadFile", "CreateRaces", "UploadFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div>
+                @Html.TextBox("file", "", new { type = "file" }) <br />
+
+                <input type="submit" value="Upload" />
+
+                @ViewBag.Message
+
+            </div>
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
