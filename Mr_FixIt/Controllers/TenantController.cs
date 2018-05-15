@@ -89,15 +89,17 @@ namespace Mr_FixIt.Controllers
         public ActionResult Tickets()
         {
             string UserID = User.Identity.GetUserId();
+            Tenant tenant;
             try
             {
-                Ticket ticket = (from row in context.Tickets where row.ID == row.ID select row).First();
-                return View(ticket);
+                tenant = (from row in context.Tenants where row.UserId == UserID select row).First();
             }
             catch
             {
-                return RedirectToAction("CreateTicket");
+                return RedirectToAction("Create");
             }
+            List<Ticket> model = (from row in context.TicketTenantJunctions where row.TenantId == tenant.ID select row.ticket).ToList();
+            return View(model);
         }
 
 

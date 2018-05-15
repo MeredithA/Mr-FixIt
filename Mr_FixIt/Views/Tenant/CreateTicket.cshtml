@@ -17,27 +17,18 @@
                 <h4>Nature Of The Work Request</h4>
                 <select class="form-control" id="NatureOfTicket" name="NatureOfTicket">
                     <option>Select A Category</option>
-                    <option>Pest Control</option>
-                    <option>Electrical</option>
-                    <option>Plumbing</option>
-                    <option>Furnace</option>
-                    <option>Window</option>
                     <option>Door</option>
+                    <option>Electrical</option>
+                    <option>Furnace</option>
+                    <option>Pest Control</option>
+                    <option>Plumbing</option>
+                    <option>Window</option>
                 </select>
                 @*@Html.EditorFor(model => model.NatureOfTicket, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.NatureOfTicket, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        @*<select class="form-control" id="StudentGender" name="StudentGender">
-                <h4>Nature Of The Work Request</h4>
-                <option>Pest Control</option>
-                <option>Electrical</option>
-                <option>Plumbing</option>
-                <option>Furnace</option>
-                <option>Window</option>
-                <option>Door</option>
-            </select>*@
 
         <div>
             <p> @Html.CheckBox("check") <h5>Check if you would like to receive text notifications for this request</h5> </p>
