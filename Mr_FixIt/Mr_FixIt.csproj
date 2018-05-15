@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201805141858235_restoring..Designer.cs">
       <DependentUpon>201805141858235_restoring..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805152157056_tickets.cs" />
+    <Compile Include="Migrations\201805152157056_tickets.Designer.cs">
+      <DependentUpon>201805152157056_tickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Building.cs" />
@@ -311,7 +315,7 @@
     <Content Include="Views\Tenant\CreateTicket.cshtml" />
     <Content Include="Views\Tenant\EditBulletin.cshtml" />
     <Content Include="Views\Tenant\Index.cshtml" />
-    <Content Include="Views\Tenant\Ticket.cshtml" />
+    <Content Include="Views\Tenant\Tickets.cshtml" />
     <Content Include="Views\Tenant\DeleteBulletin.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805141858235_restoring..resx">
       <DependentUpon>201805141858235_restoring..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805152157056_tickets.resx">
+      <DependentUpon>201805152157056_tickets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

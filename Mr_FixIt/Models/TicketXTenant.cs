@@ -13,6 +13,5 @@ namespace Mr_FixIt.Models
         public int TicketId { get; set; }
         public Ticket ticket { get; set; }
         public int TenantId { get; set; }
-        public Tenant Tenant { get; set; }
     }
 }

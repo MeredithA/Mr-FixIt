@@ -57,7 +57,6 @@ namespace Mr_FixIt.Controllers
                 context.SaveChanges();
                 Building building = (from row in context.Buildings where row.ID == model.ID select row).First();
                 BuildingXManager junction = new BuildingXManager();
-                //junction = manager;
                 junction.ManagerId = manager.ID;
                 junction.building = building;
                 junction.BuildId = model.ID;

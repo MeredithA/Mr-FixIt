@@ -73,7 +73,6 @@ namespace Mr_FixIt.Controllers
                 context.SaveChanges();
                 Ticket ticket = (from row in context.Tickets where row.ID == model.ID select row).First();
                 TicketXTenant junction = new TicketXTenant();
-                junction.Tenant = tenant;
                 junction.TenantId = tenant.ID;
                 junction.ticket = ticket;
                 junction.TicketId = model.ID;

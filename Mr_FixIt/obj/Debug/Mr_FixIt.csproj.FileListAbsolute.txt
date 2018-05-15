@@ -83,3 +83,4 @@ C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.pdb
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.lastworkingversion.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.csproj.GenerateResource.Cache
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.restoring.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.tickets.resources

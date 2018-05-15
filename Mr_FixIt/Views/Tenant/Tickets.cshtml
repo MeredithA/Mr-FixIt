@@ -1,0 +1,47 @@
+﻿@model List<Mr_FixIt.Models.Ticket>
+@{
+    ViewBag.Title = "Tickets";
+}
+
+<h2>Tickets</h2>
+
+@if (Model.Count == 0)
+{
+    <h4>You currently have no tickets.</h4>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].NatureOfTicket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].LocationOfTheReuqest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].AdditionalInformation)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NatureOfTicket)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationOfTheReuqest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdditionalInformation)
+                </td>
+                @*<td>
+                        View status of ticket.
+                    </td>*@
+            </tr>
+        }
+
+    </table>
+}
+@Html.ActionLink("Create A Ticket", "CreateTicket")
