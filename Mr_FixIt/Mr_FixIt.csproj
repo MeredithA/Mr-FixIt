@@ -334,6 +334,7 @@
     <Content Include="Views\Tenant\Tickets.cshtml" />
     <Content Include="Views\Tenant\DeleteBulletin.cshtml" />
     <Content Include="Views\Tenant\DeleteTicket.cshtml" />
+    <Content Include="Views\Manager\ViewAllTickets.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

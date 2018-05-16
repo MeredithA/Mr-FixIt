@@ -232,16 +232,16 @@ namespace Mr_FixIt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteBulletin(int id)
+        public ActionResult DeleteBulletin(BulletinBoard model)
         {
 
-            BulletinBoard bulletin = (from row in context.BulletinBoards where row.ID == row.ID select row).First();
+            BulletinBoard bulletin = (from row in context.BulletinBoards where model.ID == row.ID select row).First();
             context.BulletinBoards.Remove(bulletin);
             context.SaveChanges();
             return RedirectToAction("Bulletins");
         }
 
-        public ActionResult ViewTickets()
+        public ActionResult ViewAllTickets()
         {
             return View();
         }
