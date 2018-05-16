@@ -12,7 +12,7 @@ namespace Mr_FixIt.Models
         [Key]
         public int ID { get; set; }
         [Display(Name = "Nature of Request:")]
-        public List<Ticket> NatureOfTicket { get; set; }
+        public string NatureOfTicket { get; set; }
         [Display(Name = "Location of the request:")]
         public string LocationOfTheReuqest { get; set; }
         [Display(Name = "Check if you would like updates")]
@@ -21,6 +21,5 @@ namespace Mr_FixIt.Models
         public string AdditionalInformation { get; set; }
         public string FilePath { get; set; }
         public string FileName { get; set; }
-        public List<Ticket> AllTickets { get; set; }
     }
 }

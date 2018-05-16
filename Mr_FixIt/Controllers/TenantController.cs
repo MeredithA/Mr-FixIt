@@ -57,8 +57,15 @@ namespace Mr_FixIt.Controllers
         [HttpGet]
         public ActionResult CreateTicket()
         {
-            List<Ticket> Tickets = (from row in context.Tickets select row).ToList();
-            ViewBag.TicketList = Tickets;
+            
+            ViewBag.TicketList = new List<SelectListItem> {
+                    new SelectListItem { Text = "Door", Value="Door"},
+                    new SelectListItem { Text = "Electrical", Value="Electrical"},
+                    new SelectListItem { Text = "Furnace", Value="Furnace"},
+                    new SelectListItem { Text = "Pest Control", Value="Pest Control"},
+                    new SelectListItem { Text = "Plumbing", Value="Plumbing"},
+                    new SelectListItem { Text = "Window", Value="Window"},
+            };
             return View();
         }
 
