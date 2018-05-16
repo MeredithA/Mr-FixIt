@@ -182,8 +182,8 @@ namespace Mr_FixIt.Controllers
         {
             string UserID = User.Identity.GetUserId();
             BulletinListViewModel model = new BulletinListViewModel();
-            model.AllBulletins = (from row in context.BulletinBoards where row.VisableToTenants == true && row.OwnerId != UserID select row).ToList();
-            model.OwnedBulletins = (from row in context.BulletinBoards where row.VisableToTenants == true && row.OwnerId == UserID select row).ToList();
+            model.AllBulletins = (from row in context.BulletinBoards where  row.OwnerId != UserID select row).ToList();
+            model.OwnedBulletins = (from row in context.BulletinBoards where row.OwnerId == UserID select row).ToList();
             return View(model);
         }
 
