@@ -224,6 +224,10 @@
     <Compile Include="Migrations\201805152346498_revert.Designer.cs">
       <DependentUpon>201805152346498_revert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805160018442_t.cs" />
+    <Compile Include="Migrations\201805160018442_t.Designer.cs">
+      <DependentUpon>201805160018442_t.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Building.cs" />
@@ -353,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805152346498_revert.resx">
       <DependentUpon>201805152346498_revert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805160018442_t.resx">
+      <DependentUpon>201805160018442_t.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

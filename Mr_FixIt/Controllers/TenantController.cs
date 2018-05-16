@@ -58,7 +58,7 @@ namespace Mr_FixIt.Controllers
         public ActionResult CreateTicket()
         {
             List<Ticket> Tickets = (from row in context.Tickets select row).ToList();
-            ViewBag.BuildingList = Tickets;
+            ViewBag.TicketList = Tickets;
             return View();
         }
 
@@ -102,6 +102,30 @@ namespace Mr_FixIt.Controllers
             return View(model);
         }
 
+        public ActionResult DeleteTicket(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Ticket ticket = context.Tickets.Find(id);
+            if (ticket == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ticket);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteTicket(int id)
+        {
+
+            Ticket ticket = (from row in context.Tickets where row.ID == row.ID select row).First();
+            context.Tickets.Remove(ticket);
+            context.SaveChanges();
+            return RedirectToAction("Tickets");
+        }
 
 
         public ActionResult CreateBulletin()
