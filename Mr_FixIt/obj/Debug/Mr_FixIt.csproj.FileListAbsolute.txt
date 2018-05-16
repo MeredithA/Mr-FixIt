@@ -84,3 +84,5 @@ C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.lastwo
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.csproj.GenerateResource.Cache
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.restoring.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.tickets.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addedallticketstotenantticketmodel.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.revert.resources

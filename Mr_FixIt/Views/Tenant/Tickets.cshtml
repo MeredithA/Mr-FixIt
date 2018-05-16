@@ -36,6 +36,9 @@ else
                 <td>
                     @Html.DisplayFor(modelItem => item.AdditionalInformation)
                 </td>
+                <td>
+                    @Html.ActionLink("Status", "TicketStatus", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })
+                </td>
                 @*<td>
                         View status of ticket.
                     </td>*@

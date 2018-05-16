@@ -216,6 +216,14 @@
     <Compile Include="Migrations\201805152157056_tickets.Designer.cs">
       <DependentUpon>201805152157056_tickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805152253559_added all tickets to tenant ticket model..cs" />
+    <Compile Include="Migrations\201805152253559_added all tickets to tenant ticket model..Designer.cs">
+      <DependentUpon>201805152253559_added all tickets to tenant ticket model..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805152346498_revert.cs" />
+    <Compile Include="Migrations\201805152346498_revert.Designer.cs">
+      <DependentUpon>201805152346498_revert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Building.cs" />
@@ -317,6 +325,7 @@
     <Content Include="Views\Tenant\Index.cshtml" />
     <Content Include="Views\Tenant\Tickets.cshtml" />
     <Content Include="Views\Tenant\DeleteBulletin.cshtml" />
+    <Content Include="Views\Tenant\DeleteTicket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -338,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805152157056_tickets.resx">
       <DependentUpon>201805152157056_tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805152253559_added all tickets to tenant ticket model..resx">
+      <DependentUpon>201805152253559_added all tickets to tenant ticket model..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805152346498_revert.resx">
+      <DependentUpon>201805152346498_revert.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

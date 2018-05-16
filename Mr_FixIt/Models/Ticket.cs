@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Mr_FixIt.Models
 {
@@ -10,7 +11,7 @@ namespace Mr_FixIt.Models
     {
         [Key]
         public int ID { get; set; }
-        [Display(Name = "Nature of the work request:")]
+        [Display(Name = "Nature of Request:")]
         public List<Ticket> NatureOfTicket { get; set; }
         [Display(Name = "Location of the request:")]
         public string LocationOfTheReuqest { get; set; }
@@ -20,5 +21,6 @@ namespace Mr_FixIt.Models
         public string AdditionalInformation { get; set; }
         public string FilePath { get; set; }
         public string FileName { get; set; }
+        public List<Ticket> AllTickets { get; set; }
     }
 }
