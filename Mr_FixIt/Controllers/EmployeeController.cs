@@ -61,8 +61,4 @@ namespace Mr_FixIt.Controllers
     //    return View();
     //}
 
-    //public ActionResult UpdateTicket()
-    //{
-    //    return View();
-    //}
 }

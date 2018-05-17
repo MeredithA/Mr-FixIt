@@ -1,7 +1,36 @@
-﻿
+﻿@model List<Mr_FixIt.Models.Ticket>
 @{
     ViewBag.Title = "ViewAllTickets";
 }
 
 <h2>ViewAllTickets</h2>
 
+@if (Model.Count == 0)
+{
+    <p>There are no tickets</p>
+}
+else
+{
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m[0].LocationOfTheReuqest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m[0].NatureOfTicket)
+            </th>
+        </tr>
+        @foreach(Mr_FixIt.Models.Ticket ticket in Model)
+        {
+            <tr>
+                <td>
+                    @ticket.LocationOfTheReuqest
+                </td>
+                <td>
+                    @ticket.NatureOfTicket
+                </td>
+            </tr>
+        }
+    </table>
+
+}

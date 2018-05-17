@@ -243,7 +243,28 @@ namespace Mr_FixIt.Controllers
 
         public ActionResult ViewAllTickets()
         {
-            return View();
+            try
+            {
+                List<Ticket> model = new List<Ticket>();
+                string uid = User.Identity.GetUserId();
+                int mid = (from row in context.Managers where row.UserId == uid select row.ID).First();
+                List<int> buildingIds = (from row in context.BuildingManagerJunctions where row.ManagerId == mid select row.ID).ToList();
+                foreach(int number in buildingIds)
+                {
+                    List<int> tennantIds = (from row in context.Tenants where row.BuildingId == number select row.ID).ToList();
+                    foreach(int tennantId in tennantIds)
+                    {
+                        model.AddRange((from row in context.TicketTenantJunctions where row.TenantId == tennantId select row.ticket).ToList());
+                    }
+                }
+
+                return View(model);
+            }
+            catch
+            {
+                return RedirectToAction("Index");
+            }
+
         }
 
         public ActionResult TicketUpdateNotification()
