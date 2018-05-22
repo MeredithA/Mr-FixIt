@@ -44,6 +44,7 @@ else
 
 @if (Model.OwnedBulletins.Count > 0)
 {
+    <h4>Your Posted Bulletins</h4>
     <table class="table">
         <tr>
             <th>
@@ -53,8 +54,6 @@ else
                 @Html.DisplayNameFor(model => model.OwnedBulletins[0].DatePosted)
             </th>
         </tr>
-        <h2>Your Posted Bulletins</h2>
-
         @foreach (var item in Model.OwnedBulletins)
                 {
             <tr>
@@ -73,6 +72,5 @@ else
 }
 else
 {
-    <h4>You Have No Posted Any Bulletins</h4>
+    <h4>You Have Not Posted Any Bulletins</h4>
 }
-@Html.ActionLink("Create A Bulletin", "CreateBulletin")

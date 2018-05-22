@@ -195,7 +195,7 @@ namespace Mr_FixIt.Controllers
             {
                 context.Entry(bulletinBoard).State = EntityState.Modified;
                 context.SaveChanges();
-                return RedirectToAction("EditBulletin");
+                return RedirectToAction("Bulletins");
             }
             ViewBag.UserId = new SelectList(context.Users, "Id", "Email", bulletinBoard.ID);
             return View(bulletinBoard);
