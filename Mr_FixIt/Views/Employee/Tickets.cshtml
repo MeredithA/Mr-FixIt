@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Mr_FixIt.Models.Ticket>
+
+@{
+    ViewBag.Title = "Tickets";
+}
+
+<h2>Your Tickets</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NatureOfTicket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationOfTheReuqest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateNote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketNotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NatureOfTicket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationOfTheReuqest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalInformation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateNote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketNotes)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "EditTicket", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

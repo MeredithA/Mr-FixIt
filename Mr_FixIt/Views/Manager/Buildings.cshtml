@@ -48,7 +48,6 @@ else
                     @Html.DisplayFor(modelItem => item.ZipCode)
                 </td>
                 <td>
-                    @Html.ActionLink("Tickets", "BuildingTickets", new { id = item.ID })
                     @Html.ActionLink("Edit", "EditBuilding", new { id = item.ID })
                     @Html.ActionLink("Delete", "DeleteBuilding", new { id = item.ID })
 

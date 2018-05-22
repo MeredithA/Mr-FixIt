@@ -48,17 +48,44 @@ namespace Mr_FixIt.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //public ActionResult UpdateTicket()
+        //{
+        //    return View("Index");
+        //}
+
+        public ActionResult Tickets()
+        {
+            string UserId = User.Identity.GetUserId();
+            int id = (from row in context.Employees where row.UserId == UserId select row.ID).First();
+            List<Ticket> model = (from row in context.Tickets where row.EmployeeId == id select row).ToList();
+            return View(model);
+        }
+
+        public ActionResult EditTicket(int? id)
+        {
+            Ticket ticket = (from row in context.Tickets where row.ID == id select row).First();
+
+            ViewBag.Employees = context.Employees;
+            return View(ticket);
+        }
+
+        [HttpPost]
+        public ActionResult EditTicket(Ticket model)
+        {
+            Ticket ticket = context.Tickets.Find(model.ID);
+            ticket.TicketNotes = model.TicketNotes;
+            ticket.Employee = context.Employees.Find(model.EmployeeId);
+            ticket.UpdateNote = model.UpdateNote;
+            ticket.UpdatedDate = DateTime.Now;
+            ticket.EmployeeId = model.EmployeeId;
+            context.SaveChanges();
+
+            return RedirectToAction("tickets");
+        }
     }
 
 
-    //public ActionResult UpdateTicket()
-    //{
-    //    return View("Index");
-    //}
 
-    //public ActionResult OpenTickets()
-    //{
-    //    return View();
-    //}
 
 }

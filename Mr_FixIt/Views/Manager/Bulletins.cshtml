@@ -1,8 +1,4 @@
-﻿@{
-    ViewBag.Title = "Bulletins";
-}
-
-@model Mr_FixIt.Models.BulletinListViewModel
+﻿@model Mr_FixIt.Models.BulletinListViewModel
 @{
     ViewBag.Title = "Bulletins";
 }
@@ -11,6 +7,7 @@
 
 @if (Model.AllBulletins.Count > 0)
 {
+    <h4>Posted Bulletins</h4>
     <table class="table">
         <tr>
             <th>

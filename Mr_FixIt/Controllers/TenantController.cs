@@ -73,6 +73,9 @@ namespace Mr_FixIt.Controllers
         public ActionResult CreateTicket(Ticket model)
         {
             string UserID = User.Identity.GetUserId();
+            model.PostedDate = DateTime.Now;
+            model.UpdatedDate = model.PostedDate;
+            model.UpdateNote = "Your ticket has been submited.";
             try
             {
                 Tenant tenant = (from row in context.Tenants where row.UserId == UserID select row).First();

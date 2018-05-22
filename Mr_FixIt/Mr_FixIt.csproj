@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201805162230303_updated ticket model..Designer.cs">
       <DependentUpon>201805162230303_updated ticket model..cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805170025015_added to ticket model..cs" />
+    <Compile Include="Migrations\201805170025015_added to ticket model..Designer.cs">
+      <DependentUpon>201805170025015_added to ticket model..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805170031173_added to ticket model for emplyee.cs" />
+    <Compile Include="Migrations\201805170031173_added to ticket model for emplyee.Designer.cs">
+      <DependentUpon>201805170031173_added to ticket model for emplyee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Building.cs" />
@@ -242,6 +250,7 @@
     <Compile Include="Models\EmployeeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\ManagerTicketEditViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Tenant.cs" />
     <Compile Include="Models\TenantCreateViewModel.cs" />
@@ -335,6 +344,10 @@
     <Content Include="Views\Tenant\DeleteBulletin.cshtml" />
     <Content Include="Views\Tenant\DeleteTicket.cshtml" />
     <Content Include="Views\Manager\ViewAllTickets.cshtml" />
+    <Content Include="Views\Manager\EditTicket.cshtml" />
+    <Content Include="Views\Employee\Tickets.cshtml" />
+    <Content Include="Views\Employee\ViewBulletinBoard.cshtml" />
+    <Content Include="Views\Employee\EditTicket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805162230303_updated ticket model..resx">
       <DependentUpon>201805162230303_updated ticket model..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805170025015_added to ticket model..resx">
+      <DependentUpon>201805170025015_added to ticket model..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805170031173_added to ticket model for emplyee.resx">
+      <DependentUpon>201805170031173_added to ticket model for emplyee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

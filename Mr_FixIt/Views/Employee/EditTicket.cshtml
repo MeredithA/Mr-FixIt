@@ -1,0 +1,75 @@
+﻿@model Mr_FixIt.Models.Ticket
+
+@{
+    ViewBag.Title = "EditTicket";
+}
+
+<h2>Update Ticket</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Ticket</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.NatureOfTicket)
+        @Html.HiddenFor(model => model.LocationOfTheReuqest)
+        @Html.HiddenFor(model => model.ReceiveUpdate)
+        @Html.HiddenFor(model => model.AdditionalInformation)
+        @Html.HiddenFor(model => model.PostedDate)
+        @Html.HiddenFor(model => model.CompletionDate)
+        @Html.HiddenFor(model => model.FileName)
+        @Html.HiddenFor(model => model.FilePath)
+        @Html.HiddenFor(model => model.EmployeeId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NatureOfTicket, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.NatureOfTicket</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LocationOfTheReuqest, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.LocationOfTheReuqest</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AdditionalInformation, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.AdditionalInformation</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UpdateNote, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UpdateNote, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UpdateNote, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TicketNotes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TicketNotes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TicketNotes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

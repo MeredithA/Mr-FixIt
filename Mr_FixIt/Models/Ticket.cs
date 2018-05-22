@@ -21,5 +21,15 @@ namespace Mr_FixIt.Models
         public string AdditionalInformation { get; set; }
         public string FilePath { get; set; }
         public string FileName { get; set; }
+        [Display(Name = "Update Note:")]
+        public string UpdateNote { get; set; }
+        public DateTime PostedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public DateTime? CompletionDate { get; set; }
+        [Display(Name = "Ticket Notes:")]
+        public string TicketNotes { get; set; }
+        public int? EmployeeId { get; set; }
+        public Employee Employee { get; set; }
+
     }
 }

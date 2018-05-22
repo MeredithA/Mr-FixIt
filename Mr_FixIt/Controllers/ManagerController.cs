@@ -266,7 +266,29 @@ namespace Mr_FixIt.Controllers
             }
 
         }
+        [HttpGet]
+        public ActionResult EditTicket(int? id)
+        {
+            Ticket ticket = (from row in context.Tickets where row.ID == id select row).First();
 
+            ViewBag.Employees = context.Employees;
+            return View(ticket);
+        }
+
+        [HttpPost]
+        public ActionResult EditTicket(Ticket model)
+        {
+            Ticket ticket = context.Tickets.Find(model.ID);
+            ticket.TicketNotes = model.TicketNotes;
+            ticket.Employee = context.Employees.Find(model.EmployeeId);
+            //dftygiokpl[;poiygfdsyuiopiuresardtuioputsayuiopudsfgui this isnt gonna work maybe
+            ticket.UpdateNote = model.UpdateNote;
+            ticket.UpdatedDate = DateTime.Now;
+            ticket.EmployeeId = model.EmployeeId;
+            context.SaveChanges();
+
+            return RedirectToAction("ViewAllTickets");
+        }
         public ActionResult TicketUpdateNotification()
         {
             return View();

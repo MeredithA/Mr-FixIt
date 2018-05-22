@@ -3,7 +3,7 @@
     ViewBag.Title = "ViewAllTickets";
 }
 
-<h2>ViewAllTickets</h2>
+<h2>All Tickets</h2>
 
 @if (Model.Count == 0)
 {
@@ -20,17 +20,21 @@ else
                 @Html.DisplayNameFor(m => m[0].NatureOfTicket)
             </th>
         </tr>
-        @foreach(Mr_FixIt.Models.Ticket ticket in Model)
+        @foreach(var item in Model)
         {
             <tr>
                 <td>
-                    @ticket.LocationOfTheReuqest
+                    @Html.DisplayFor(modelItem => item.LocationOfTheReuqest)
                 </td>
                 <td>
-                    @ticket.NatureOfTicket
+                   @Html.DisplayFor(modelItem => item.NatureOfTicket)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditTicket", new { id = item.ID })
                 </td>
             </tr>
         }
-    </table>
 
+
+    </table>
 }

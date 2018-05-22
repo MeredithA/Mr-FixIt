@@ -88,3 +88,5 @@ C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addeda
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.revert.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.t.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.updatedticketmodel.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addedtoticketmodel.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addedtoticketmodelforemplyee.resources
