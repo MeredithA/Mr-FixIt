@@ -131,7 +131,7 @@ namespace Mr_FixIt.Controllers
         public ActionResult DeleteTicket(int id)
         {
 
-            Ticket ticket = (from row in context.Tickets where row.ID == row.ID select row).First();
+            Ticket ticket = context.Tickets.Find(id);
             context.Tickets.Remove(ticket);
             context.SaveChanges();
             return RedirectToAction("Tickets");
