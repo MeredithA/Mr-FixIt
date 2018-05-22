@@ -13,6 +13,5 @@ namespace Mr_FixIt.Models
         public int BuildId { get; set; }
         public Building building { get; set; }
         public int ManagerId { get; set; }
-        //public Manager Manager { get; set; }
     }
 }

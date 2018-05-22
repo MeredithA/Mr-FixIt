@@ -134,7 +134,9 @@ namespace Mr_FixIt.Controllers
         {
 
             Building building = context.Buildings.Find(id);
+            BuildingXManager deleteFromTable = (from row in context.BuildingManagerJunctions where row.BuildId == id select row).First();
             context.Buildings.Remove(building);
+            context.BuildingManagerJunctions.Remove(deleteFromTable);
             context.SaveChanges();
             return RedirectToAction("Buildings");
         }

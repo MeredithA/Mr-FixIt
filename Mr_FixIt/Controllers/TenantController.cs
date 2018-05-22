@@ -220,7 +220,7 @@ namespace Mr_FixIt.Controllers
         public ActionResult DeleteBulletin(int id)
         {
 
-            BulletinBoard bulletin = (from row in context.BulletinBoards where row.ID == row.ID select row).First();
+            BulletinBoard bulletin = context.BulletinBoards.Find(id);
             context.BulletinBoards.Remove(bulletin);
             context.SaveChanges();
             return RedirectToAction("Bulletins");
