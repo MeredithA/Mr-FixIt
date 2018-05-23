@@ -348,6 +348,7 @@
     <Content Include="Views\Employee\Tickets.cshtml" />
     <Content Include="Views\Employee\ViewBulletinBoard.cshtml" />
     <Content Include="Views\Employee\EditTicket.cshtml" />
+    <Content Include="Views\Manager\DeleteTicket.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

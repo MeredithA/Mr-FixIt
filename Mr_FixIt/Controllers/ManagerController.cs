@@ -291,6 +291,31 @@ namespace Mr_FixIt.Controllers
 
             return RedirectToAction("ViewAllTickets");
         }
+        public ActionResult DeleteTicket(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Ticket ticket = context.Tickets.Find(id);
+            if (ticket == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ticket);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteTicket(int id)
+        {
+
+            Ticket ticket = context.Tickets.Find(id);
+            context.Tickets.Remove(ticket);
+            context.SaveChanges();
+            return RedirectToAction("ViewAllTickets");
+        }
+
         public ActionResult TicketUpdateNotification()
         {
             return View();

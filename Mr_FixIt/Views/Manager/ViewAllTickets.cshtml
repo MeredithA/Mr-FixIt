@@ -14,15 +14,24 @@ else
     <table>
         <tr>
             <th>
+                @Html.DisplayNameFor(m => m[0].PostedDate)
+            </th>
+            <th>
                 @Html.DisplayNameFor(m => m[0].LocationOfTheReuqest)
             </th>
             <th>
                 @Html.DisplayNameFor(m => m[0].NatureOfTicket)
             </th>
+            <th>
+                @Html.DisplayNameFor(m => m[0].TicketNotes)
+            </th>
         </tr>
         @foreach(var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostedDate)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LocationOfTheReuqest)
                 </td>
@@ -30,7 +39,15 @@ else
                    @Html.DisplayFor(modelItem => item.NatureOfTicket)
                 </td>
                 <td>
+                <td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TicketNotes)
+                </td>
+                <td>
                     @Html.ActionLink("Edit", "EditTicket", new { id = item.ID })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteTicket", new { id = item.ID })
                 </td>
             </tr>
         }

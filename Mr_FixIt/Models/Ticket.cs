@@ -28,6 +28,7 @@ namespace Mr_FixIt.Models
         public DateTime? CompletionDate { get; set; }
         [Display(Name = "Ticket Notes:")]
         public string TicketNotes { get; set; }
+        [Display(Name = "Employee:")]
         public int? EmployeeId { get; set; }
         public Employee Employee { get; set; }
 
