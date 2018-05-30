@@ -1,0 +1,55 @@
+﻿@model Mr_FixIt.Models.BulletinBoard
+
+@{
+    ViewBag.Title = "ViewBulletin";
+}
+
+<h2>Bulletin Details</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.Owner)
+        @Html.HiddenFor(model => model.OwnerId)
+        @Html.HiddenFor(model => model.BuildingId)
+        @Html.HiddenFor(model => model.DateEdited)
+        @Html.HiddenFor(model => model.VisableToTenants)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DatePosted, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.DatePosted</p>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Building, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.Building</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.Subject</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>@Model.Message</p>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Bulletins")
+</div>

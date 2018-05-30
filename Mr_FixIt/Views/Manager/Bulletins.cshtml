@@ -25,16 +25,16 @@
         {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Subject, "ViewBulletien", new { id = item.ID })
+                    @item.Subject
                 </td>
                 <td>
                     @item.DatePosted
                 </td>
-                @*<td>
-                    @item.Owner.Email
-                </td>*@
                 <td>
-                    @Html.ActionLink("Edit", "EditBulletin", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })
+                    @item.Message
+                </td>
+                <td>
+                   @Html.ActionLink("Edit", "EditBulletin", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })
                 </td>
             </tr>
         }
@@ -62,10 +62,13 @@ else
                 {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Subject, "ViewBulletin", new { id = item.ID })
+                    @item.Subject
                 </td>
                 <td>
                     @item.DatePosted
+                </td>
+                <td>
+                    @item.Message
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "EditBulletin", new { id = item.ID }) | @Html.ActionLink("Delete", "DeleteBulletin", new { id = item.ID })

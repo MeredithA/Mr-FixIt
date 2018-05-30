@@ -24,7 +24,7 @@
         {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Subject, "ViewBulletin", new { id = item.ID })
+                    @item.Subject
                 </td>
                 <td>
                     @item.DatePosted
@@ -58,7 +58,7 @@ else
                 {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Subject, "ViewBulletin", new { id = item.ID })
+                    @item.Subject
                 </td>
                 <td>
                     @item.DatePosted

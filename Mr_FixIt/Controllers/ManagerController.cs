@@ -189,6 +189,11 @@ namespace Mr_FixIt.Controllers
             return View(model);
         }
 
+        public ActionResult ViewBulletin ()
+        {
+            return View();
+        }
+
         public ActionResult EditBulletin(int? id)
         {
             if (id == null)
@@ -313,11 +318,6 @@ namespace Mr_FixIt.Controllers
             context.Tickets.Remove(ticket);
             context.SaveChanges();
             return RedirectToAction("ViewAllTickets");
-        }
-
-        public ActionResult TicketUpdateNotification()
-        {
-            return View();
         }
     }
 }

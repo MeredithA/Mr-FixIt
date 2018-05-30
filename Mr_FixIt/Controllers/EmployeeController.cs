@@ -49,11 +49,6 @@ namespace Mr_FixIt.Controllers
             return RedirectToAction("Index");
         }
 
-        //public ActionResult UpdateTicket()
-        //{
-        //    return View("Index");
-        //}
-
         public ActionResult Tickets()
         {
             string UserId = User.Identity.GetUserId();
@@ -83,9 +78,14 @@ namespace Mr_FixIt.Controllers
 
             return RedirectToAction("tickets");
         }
+
+        public ActionResult BulletinBoard()
+        {
+            string UserID = User.Identity.GetUserId();
+            BulletinListViewModel model = new BulletinListViewModel();
+            model.AllBulletins = (from row in context.BulletinBoards where row.VisableToTenants == false && row.OwnerId != UserID select row).ToList();
+            model.OwnedBulletins = (from row in context.BulletinBoards where row.VisableToTenants == false && row.OwnerId == UserID select row).ToList();
+            return View(model);
+        }
     }
-
-
-
-
 }

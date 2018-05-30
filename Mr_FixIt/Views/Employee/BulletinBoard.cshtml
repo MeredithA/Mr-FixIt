@@ -1,0 +1,34 @@
+﻿@model Mr_FixIt.Models.BulletinListViewModel
+
+@{
+    ViewBag.Title = "BulletinBoard";
+}
+
+<h2>Bulletin Board</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AllBulletins[0].Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllBulletins[0].DatePosted)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.AllBulletins)
+        {
+            <tr>
+                <td>
+                    @item.Subject
+                </td>
+                <td>
+                    @item.DatePosted
+                </td>
+                <td>
+                    @item.Message
+                </td>
+            </tr>
+        }
+    </table>
+  

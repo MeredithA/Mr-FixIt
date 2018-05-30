@@ -346,10 +346,11 @@
     <Content Include="Views\Manager\ViewAllTickets.cshtml" />
     <Content Include="Views\Manager\EditTicket.cshtml" />
     <Content Include="Views\Employee\Tickets.cshtml" />
-    <Content Include="Views\Employee\ViewBulletinBoard.cshtml" />
+    <Content Include="Views\Employee\BulletinBoard.cshtml" />
     <Content Include="Views\Employee\EditTicket.cshtml" />
     <Content Include="Views\Manager\DeleteTicket.cshtml" />
     <Content Include="Views\Tenant\TicketStatus.cshtml" />
+    <Content Include="Views\Manager\ViewBulletin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
