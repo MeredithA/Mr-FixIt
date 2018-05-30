@@ -251,10 +251,10 @@ namespace Mr_FixIt.Controllers
                 string uid = User.Identity.GetUserId();
                 int mid = (from row in context.Managers where row.UserId == uid select row.ID).First();
                 List<int> buildingIds = (from row in context.BuildingManagerJunctions where row.ManagerId == mid select row.ID).ToList();
-                foreach(int number in buildingIds)
+                foreach (int number in buildingIds)
                 {
                     List<int> tennantIds = (from row in context.Tenants where row.BuildingId == number select row.ID).ToList();
-                    foreach(int tennantId in tennantIds)
+                    foreach (int tennantId in tennantIds)
                     {
                         model.AddRange((from row in context.TicketTenantJunctions where row.TenantId == tennantId select row.ticket).ToList());
                     }
@@ -283,7 +283,6 @@ namespace Mr_FixIt.Controllers
             Ticket ticket = context.Tickets.Find(model.ID);
             ticket.TicketNotes = model.TicketNotes;
             ticket.Employee = context.Employees.Find(model.EmployeeId);
-            //dftygiokpl[;poiygfdsyuiopiuresardtuioputsayuiopudsfgui this isnt gonna work maybe
             ticket.UpdateNote = model.UpdateNote;
             ticket.UpdatedDate = DateTime.Now;
             ticket.EmployeeId = model.EmployeeId;

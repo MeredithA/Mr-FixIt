@@ -1,0 +1,58 @@
+﻿@model Mr_FixIt.Models.Ticket
+
+@{
+    ViewBag.Title = "TicketStatus";
+}
+
+<h2>TicketStatus</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NatureOfTicket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NatureOfTicket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationOfTheReuqest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationOfTheReuqest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInformation)
+        </dd>
+
+        <dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateNote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -75,7 +75,7 @@ namespace Mr_FixIt.Controllers
             string UserID = User.Identity.GetUserId();
             model.PostedDate = DateTime.Now;
             model.UpdatedDate = model.PostedDate;
-            model.UpdateNote = "Your ticket has been submited.";
+            model.UpdateNote = "Your ticket has been submitted.";
             try
             {
                 Tenant tenant = (from row in context.Tenants where row.UserId == UserID select row).First();
@@ -224,6 +224,11 @@ namespace Mr_FixIt.Controllers
             context.BulletinBoards.Remove(bulletin);
             context.SaveChanges();
             return RedirectToAction("Bulletins");
+        }
+
+        public ActionResult ViewTicket()
+        {
+            return View();
         }
     }
 }
