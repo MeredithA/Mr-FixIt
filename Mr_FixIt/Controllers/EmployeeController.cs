@@ -75,6 +75,11 @@ namespace Mr_FixIt.Controllers
             ticket.UpdatedDate = DateTime.Now;
             ticket.EmployeeId = model.EmployeeId;
             context.SaveChanges();
+            //ticket.ReceiveUpdate
+            if (true)
+            {
+                TwilioApi.Send(ticket);
+            }
 
             return RedirectToAction("tickets");
         }
