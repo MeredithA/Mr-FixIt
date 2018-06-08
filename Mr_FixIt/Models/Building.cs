@@ -10,15 +10,15 @@ namespace Mr_FixIt.Models
     {
         [Key]
         public int ID { get; set; }
-        [Display(Name = "Building Name")]
+        [Display(Name = "Building Name:")]
         public string Name { get; set; }
-        [Display(Name = "Street Address")]
+        [Display(Name = "Street Address:")]
         public string StreetAddress { get; set; }
-        [Display(Name = "City")]
+        [Display(Name = "City:")]
         public string City { get; set; }
-        [Display(Name = "State")]
+        [Display(Name = "State:")]
         public string State { get; set; }
-        [Display(Name = "Zip Code")]
+        [Display(Name = "Zip Code:")]
         public string ZipCode { get; set; }
     }
 }

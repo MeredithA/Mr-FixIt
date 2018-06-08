@@ -87,5 +87,32 @@ namespace Mr_FixIt.Controllers
             model.OwnedBulletins = (from row in context.BulletinBoards where row.VisableToTenants == false && row.OwnerId == UserID select row).ToList();
             return View(model);
         }
+
+        public ActionResult SendNotification(int? id)
+        {
+
+            //when you click update
+            return View();
+        }
     }
 }
+
+
+
+
+//        var roomInDb = db.Tickets.FirstOrDefault(r => r.Id == id);
+//        roomInDb.IsClean = true;
+//        roomInDb.RoomStatusId = 1;
+//        try
+//        {
+//            _context.SaveChanges();
+//        }
+//        catch (DbEntityValidationException e)
+//        {
+//            Console.WriteLine(e);
+//        }
+//        string message = "Your room is ready to check in.";
+//        string number = "12624905749";
+//        var controller = new SmsController();
+//        controller.SendSms(message, number);
+//        return RedirectToAction("SeeAllRooms");

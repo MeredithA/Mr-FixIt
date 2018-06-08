@@ -90,3 +90,15 @@ C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.t.reso
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.updatedticketmodel.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addedtoticketmodel.resources
 C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\obj\Debug\Mr_FixIt.Migrations.addedtoticketmodelforemplyee.resources
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\SendGrid.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\SendGrid.pdb
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\SendGrid.xml
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Twilio.AspNet.Common.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Twilio.AspNet.Mvc.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Twilio.dll
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Meredith\Desktop\Mr_FixIt\Mr_FixIt\bin\Twilio.xml

@@ -9,7 +9,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(m => m[0].PostedDate)
+            @Html.DisplayNameFor(m => m[0].UpdatedDate)
         </th>
         <th>
             @Html.DisplayNameFor(m => m[0].LocationOfTheReuqest)
@@ -18,8 +18,9 @@
             @Html.DisplayNameFor(m => m[0].NatureOfTicket)
         </th>
         <th>
-            @Html.DisplayNameFor(m => m[0].UpdatedDate)
+            @Html.DisplayNameFor(m => m[0].PostedDate)
         </th>
+
     </tr>
     @foreach (var item in Model)
     {
@@ -37,7 +38,7 @@
                 @Html.DisplayFor(modelItem => item.UpdatedDate)
             </td>
             <td>
-                @Html.ActionLink("Update", "EditTicket", new { id = item.ID })
+                @Html.ActionLink("View", "EditTicket", new { id = item.ID })
             </td>
         </tr>
     }

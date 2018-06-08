@@ -4,7 +4,7 @@
 }
 @using System.Web.Mvc.Html;
 
-<h2>Submit a Work Request</h2>
+<h2>Please complete the form below</h2>
 
 @using (Html.BeginForm())
 {
@@ -30,10 +30,6 @@
             </div>
         </div>
 
-        <div>
-            <p> @Html.CheckBox("check") <h4>Check if you would like to receive text notifications for this request</h4> </p>
-        </div>
-
         <div class="form-group">
             @*@Html.LabelFor(model => model.LocationOfTheReuqest, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
@@ -52,18 +48,9 @@
             </div>
         </div>
 
-        @using (Html.BeginForm("UploadFile", "CreateRaces", "UploadFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-
-            <div>
-                @Html.TextBox("file", "", new { type = "file" }) <br />
-
-                <input type="submit" value="Upload" />
-
-                @ViewBag.Message
-
-            </div>
-        }
+        <div>
+            <p> @Html.CheckBox("check") <h5>Check if you would like to receive text notifications for this request</h5> </p>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

@@ -27,11 +27,11 @@
                     @item.Subject
                 </td>
                 <td>
-                    @item.DatePosted
+                    @item.DateEdited
                 </td>
-                @*<td>
-                        @item.Owner.Email
-                    </td>*@
+                <td>
+                    @item.Message
+                </td>
             </tr>
         }
     </table>
@@ -44,7 +44,7 @@ else
 
 @if (Model.OwnedBulletins.Count > 0)
 {
-    <h4>Your Posted Bulletins</h4>
+    <h2>Your Posted Bulletins</h2>
     <table class="table">
         <tr>
             <th>

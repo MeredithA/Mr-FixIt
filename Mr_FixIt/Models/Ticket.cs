@@ -11,24 +11,24 @@ namespace Mr_FixIt.Models
     {
         [Key]
         public int ID { get; set; }
-        [Display(Name = "Nature of Request")]
+        [Display(Name = "Nature of Request:")]
         public string NatureOfTicket { get; set; }
-        [Display(Name = "Location of the request")]
+        [Display(Name = "Location of the request:")]
         public string LocationOfTheReuqest { get; set; }
         [Display(Name = "Check if you would like updates")]
         public bool ReceiveUpdate { get; set; }
-        [Display(Name = "Additional Information")]
+        [Display(Name = "Additional Information:")]
         public string AdditionalInformation { get; set; }
         public string FilePath { get; set; }
         public string FileName { get; set; }
-        [Display(Name = "Update Note")]
+        [Display(Name = "Status:")]
         public string UpdateNote { get; set; }
-        [Display(Name = "Date Posted")]
+        [Display(Name = "Creation Date:")]
         public DateTime PostedDate { get; set; }
         [Display(Name = "Last Updated")]
         public DateTime UpdatedDate { get; set; }
         public DateTime? CompletionDate { get; set; }
-        [Display(Name = "Ticket Notes")]
+        [Display(Name = "Ticket Notes:")]
         public string TicketNotes { get; set; }
         [Display(Name = "Employee")]
         public int? EmployeeId { get; set; }

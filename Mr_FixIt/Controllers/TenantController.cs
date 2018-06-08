@@ -137,6 +137,27 @@ namespace Mr_FixIt.Controllers
             return RedirectToAction("Tickets");
         }
 
+        public ActionResult TicketStatus(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Ticket ticket = context.Tickets.Find(id);
+            if (ticket == null)
+            {
+                return HttpNotFound();
+            }
+            return View(ticket);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult TicketStatus(int id)
+        {
+            Ticket ticket = context.Tickets.Find(id);
+            return RedirectToAction("Tickets");
+        }
 
         public ActionResult CreateBulletin()
         {

@@ -11,15 +11,16 @@ namespace Mr_FixIt.Models
     {
         [Key]
         public int ID { get; set; }
-        [Display(Name = "Subject")]
+        [Display(Name = "Subject:")]
         public string Subject { get; set; }
-        [Display(Name = "Building")]
+        [Display(Name = "Building:")]
         public Building Building { get; set; }
         public int BuildingId { get; set; }
-        [Display(Name = "Message")]
+        [Display(Name = "Message:")]
         public string Message { get; set; }
+        [Display(Name = "Last Updated:")]
         public string DateEdited { get; set; }
-        [Display(Name = "Date Posted")]
+        [Display(Name = "Date Posted:")]
         public string DatePosted { get; set; }
         public string OwnerId { get; set; }
         public ApplicationUser Owner { get; set; }
